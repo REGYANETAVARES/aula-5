@@ -1,0 +1,5 @@
+Nome do aluno: Regyane Tavares de Oliveira
+Nome do Algoritmo: Radix Sort
+Tempo de Execucao: 00:00:00:035
+Quantidade de comparacoes: 0
+Quantidade de movimentacoes: 3000000

@@ -1,0 +1,5 @@
+Nome do aluno: Regyane Tavares de Oliveira
+Nome do Algoritmo: Quick Sort
+Tempo de Execucao: 00:00:00:046
+Quantidade de comparacoes: 11472877
+Quantidade de movimentacoes: 5822832
