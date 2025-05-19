@@ -13,37 +13,39 @@ public class Ordenacao500K {
     static long movimentacoes = 0;
 
     public static void main(String[] args) throws IOException {
-        int[] dados = lerArquivo("dados500mil.txt");
+      int[] dados = lerArquivo("dados500mil.txt");
 
-        // Quick Sort
-        int[] copiaQS = Arrays.copyOf(dados, dados.length);
-        comparacoes = 0;
-        movimentacoes = 0;
-        long inicio = System.nanoTime();
-        quickSort(copiaQS, 0, copiaQS.length - 1);
-        long fim = System.nanoTime();
-        salvarArquivo(copiaQS, "saida_quick.txt");
-        gerarRelatorio("relatorio_quick.txt", "Quick Sort", fim - inicio);
 
-        // Merge Sort
-        int[] copiaMS = Arrays.copyOf(dados, dados.length);
-        comparacoes = 0;
-        movimentacoes = 0;
-        inicio = System.nanoTime();
-        mergeSort(copiaMS, 0, copiaMS.length - 1);
-        fim = System.nanoTime();
-        salvarArquivo(copiaMS, "saida_merge.txt");
-        gerarRelatorio("relatorio_merge.txt", "Merge Sort", fim - inicio);
+        // Quick Sort - PIOR CASO
+int[] copiaQS = Arrays.copyOf(dados, dados.length);
+comparacoes = 0;
+movimentacoes = 0;
+long inicio = System.nanoTime();
+quickSort(copiaQS, 0, copiaQS.length - 1);
+long fim = System.nanoTime();
+salvarArquivo(copiaQS, "saida_quick.txt");
+gerarRelatorio("relatorio_quick.txt", "Quick Sort", fim - inicio);
 
-        // Radix Sort
-        int[] copiaRS = Arrays.copyOf(dados, dados.length);
-        comparacoes = 0;
-        movimentacoes = 0;
-        inicio = System.nanoTime();
-        radixSort(copiaRS);
-        fim = System.nanoTime();
-        salvarArquivo(copiaRS, "saida_radix.txt");
-        gerarRelatorio("relatorio_radix.txt", "Radix Sort", fim - inicio);
+// Merge Sort - PIOR CASO
+int[] copiaMS = Arrays.copyOf(dados, dados.length);
+comparacoes = 0;
+movimentacoes = 0;
+inicio = System.nanoTime();
+mergeSort(copiaMS, 0, copiaMS.length - 1);
+fim = System.nanoTime();
+salvarArquivo(copiaMS, "saida_merge.txt");
+gerarRelatorio("relatorio_merge.txt", "Merge Sort", fim - inicio);
+
+// Radix Sort - PIOR CASO
+int[] copiaRS = Arrays.copyOf(dados, dados.length);
+comparacoes = 0;
+movimentacoes = 0;
+inicio = System.nanoTime();
+radixSort(copiaRS);
+fim = System.nanoTime();
+salvarArquivo(copiaRS, "saida_radix.txt");
+gerarRelatorio("relatorio_radix.txt", "Radix Sort", fim - inicio);
+
     }
 
     static int[] lerArquivo(String nome) throws IOException {
